@@ -113,6 +113,16 @@ export default function HomeScreen() {
 
       <View style={styles.quickActions}>
         <Text style={styles.sectionTitle}>Quick Actions</Text>
+        
+        {/* NEW REPORT BUTTON - Added here */}
+        <TouchableOpacity
+          style={[styles.actionButton, styles.primaryActionButton]}
+          onPress={() => router.push('/camera-report')}
+        >
+          <Ionicons name="camera" size={24} color="white" />
+          <Text style={[styles.actionButtonText, styles.primaryActionText]}>New Report</Text>
+        </TouchableOpacity>
+        
         <TouchableOpacity
           style={styles.actionButton}
           onPress={() => router.push('/reports')}
@@ -234,5 +244,14 @@ const styles = StyleSheet.create({
     color: '#333',
     marginLeft: 10,
     fontWeight: '500',
+  },
+  // NEW STYLES for the primary "New Report" button
+  primaryActionButton: {
+    backgroundColor: '#007AFF',
+    borderWidth: 0,
+  },
+  primaryActionText: {
+    color: 'white',
+    fontWeight: '600',
   },
 });

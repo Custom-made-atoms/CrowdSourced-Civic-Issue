@@ -32,6 +32,14 @@ export default function Layout() {
         }}
       />
       <Tabs.Screen
+        name="camera-report"
+        options={{
+          tabBarLabel: 'Camera',
+          tabBarButton: (props) => <HapticTab {...props} />,
+          tabBarIcon: ({ color }) => <IconSymbol name="camera" color={color} size={24} />,
+        }}
+      />
+      <Tabs.Screen
         name="explore"
         options={{
           tabBarLabel: 'Explore',
